@@ -26,9 +26,16 @@ namespace TestApplication
 
         private static async void SendForecast(IMessenger dataSender)
         {
-            var forecast = await DataHolder.GetForecast();
-            var serializeObject = JsonSerializer.Serialize(forecast);
-            dataSender.Send(prefix + "(Forecast)" + serializeObject);
+			try
+			{
+                var forecast = await DataHolder.GetForecast();
+                var serializeObject = JsonSerializer.Serialize(forecast);
+                dataSender.Send(prefix + "(Forecast)" + serializeObject);
+			}
+			catch
+			{
+				Console.WriteLine("Exception on get forecast");
+			}
         }
 
         private static Task SendRuntimeData(IMessenger messenger, float cycleDelaySec = 1)

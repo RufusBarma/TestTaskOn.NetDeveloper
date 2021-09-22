@@ -8,8 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestTask.Properties
-{
+namespace TestTask.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -17,53 +19,55 @@ namespace TestTask.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder",
-        "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
-        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance",
-            "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState
-            .Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
-                    global::System.Resources.ResourceManager temp =
-                        new global::System.Resources.ResourceManager("TestTask.Properties.Resources",
-                            typeof(Resources).Assembly);
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TestTask.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
-
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState
-            .Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get { return resourceCulture; }
-            set { resourceCulture = value; }
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///      {&quot;now&quot;:1632338558,&quot;now_dt&quot;:&quot;2021-09-22T19:22:38.741659Z&quot;,&quot;info&quot;:{&quot;n&quot;:true,&quot;geoid&quot;:56,&quot;url&quot;:&quot;https://yandex.ru/pogoda/56?lat=55.159897\u0026lon=61.402554&quot;,&quot;lat&quot;:55.159897,&quot;lon&quot;:61.402554,&quot;tzinfo&quot;:{&quot;name&quot;:&quot;Asia/Yekaterinburg&quot;,&quot;abbr&quot;:&quot;+05&quot;,&quot;dst&quot;:false,&quot;offset&quot;:18000},&quot;def_pressure_mm&quot;:740,&quot;def_pressure_pa&quot;:986,&quot;slug&quot;:&quot;56&quot;,&quot;zoom&quot;:10,&quot;nr&quot;:true,&quot;ns&quot;:true,&quot;nsr&quot;:true,&quot;p&quot;:false,&quot;f&quot;:true,&quot;_h&quot;:false},&quot;geo_object&quot;:{&quot;district&quot;:{&quot;id&quot;:108160,&quot;name&quot;:&quot;Советский район&quot;},&quot;locality&quot;:{&quot;id&quot;:56,&quot;name&quot;:&quot;Челябинск&quot;},&quot;provin [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string WeatherResponce {
+            get {
+                return ResourceManager.GetString("WeatherResponce", resourceCulture);
+            }
         }
     }
 }

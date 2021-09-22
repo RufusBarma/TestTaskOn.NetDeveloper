@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TestApplication.YandexForecastResponse;
 using System.Text.Json;
 using System.Diagnostics;
+using TestTask.Properties;
 
 namespace TestApplication
 {
@@ -80,10 +81,14 @@ namespace TestApplication
                 ";
             var client = new HttpClient();
             var yandexApiKey = "enterYourYandexWeatherApiKey";
+            string responseString;
             if (yandexApiKey == "enterYourYandexWeatherApiKey")
-                throw new Exception("Please, enter your yandex weather api key");
-            client.DefaultRequestHeaders.Add("X-Yandex-API-Key", yandexApiKey);
-            var responseString = await client.GetStringAsync(apiRequest);
+                responseString = Resources.WeatherResponce;
+            else
+            {
+                client.DefaultRequestHeaders.Add("X-Yandex-API-Key", yandexApiKey);
+                responseString = await client.GetStringAsync(apiRequest);
+            }
             var myDeserializedClass = JsonSerializer.Deserialize<ForecastResponse>(responseString);
             return myDeserializedClass;
         }
